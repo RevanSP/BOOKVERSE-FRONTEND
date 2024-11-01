@@ -213,8 +213,8 @@ const ManhwaSection: React.FC = () => {
                         <label className="input input-bordered flex items-center mt-3 sm:mt-0 gap-2 w-full border-neutral-content border-2 rounded bg-base-200">
                             <input
                                 type="text"
-                                className="grow"
-                                placeholder={`Search Manhwa (${manhwaTotal})`}
+                                className="grow text-xs"
+                                placeholder={`Search Manhwa (${manhwaTotal}) - USE GOOGLE PUBLIC DNS TO LOAD CONTENT !`}
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 onClick={handleSearchInputClick}
@@ -344,7 +344,7 @@ const ManhwaSection: React.FC = () => {
                                         <li className="text-sm"><strong>Recent Read :</strong> {readingHistory[selectedManhwa?.title] !== undefined ? `Chapter ${readingHistory[selectedManhwa.title]}` : "NONE"}</li>
                                     </ul>
                                     <div className="absolute bottom-4 right-4">
-                                        <div className="tooltip tooltip-top tooltip-primary" data-tip="If images are blank, try reopening the chapter or refreshing the page. It is recommended to use Google Public DNS for better performance, as some internet service providers may restrict direct access to certain content.">
+                                        <div className="tooltip tooltip-left tooltip-primary" data-tip="If images are blank, try reopening the chapter.">
                                             <button className="btn btn-sm btn-base-200 border-2 border-neutral-content rounded">
                                                 <i className="fa-solid fa-circle-info"></i>
                                             </button>
